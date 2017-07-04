@@ -13,17 +13,16 @@ const popup = document.createElement("div");
 const text = document.createTextNode("");
 
 // Style the popup
-var props = "text-align: left; font-family: serif;";
+var props = "";
+props += "text-align: left; font-family: serif;";
 props += "background-color: magenta; color: white;";
-props += "position: fixed; top: 0; right: 0; margin: 100px 0px;";
-props += "padding: 20px; width: 200px;";
-props += "opacity: 0.5;";
+props += "position: fixed; bottom: 0; left: 50%;";
+props += "width: 200px; height: 100px;";
+props += "opacity: 0.7;";
 props += "box-shadow: 10px 10px 5px #888;";
-props += "border: 2px solid black;";
-props += "border-radius: 10px 0px 0px 10px;";
-popup.style = props;
 
-// And render it
+// Apply the styl and render it
+popup.style = props;
 popup.appendChild(text);
 document.body.appendChild(popup);
 
