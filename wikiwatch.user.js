@@ -13,7 +13,7 @@ var popup = document.createElement("div");
 var t = document.createTextNode("");
 
 // Style the popup
-var props = "text-align: left; font-family: sans-serif;";
+var props = "text-align: left; font-family: serif;";
 props += "background-color: magenta; color: white;";
 props += "position: fixed; top: 0; right: 0; margin: 100px 0px;";
 props += "padding: 20px; width: 200px;";
