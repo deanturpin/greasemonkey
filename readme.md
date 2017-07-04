@@ -4,7 +4,7 @@ See [dependencies and resources](dependencies.md).
 
 ## wikiwatch
 
-Wiki helper. Use it on [https://en.wikipedia.org/wiki/Good_Friday_Agreement](Wikipedia).
+Wiki helper. Use it on [Wikipedia](https://en.wikipedia.org/wiki/Good_Friday_Agreement).
 
 [Install](wikiwatch.user.js)
 
