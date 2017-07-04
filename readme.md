@@ -1,5 +1,3 @@
-# Greasemonkey scripts
-
 See [dependencies and resources](dependencies.md).
 
 ## wikiwatch
