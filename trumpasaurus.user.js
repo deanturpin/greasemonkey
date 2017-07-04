@@ -3,7 +3,7 @@
 // @namespace   deanturpin
 // @description Quick word stat check to find candidate speeches for further study
 // @include     http://www.britishpoliticalspeech.org/*
-// @version     3
+// @version     1
 // @grant       none
 // ==/UserScript==
 

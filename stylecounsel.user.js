@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name        Style Counsel
+// @name        stylecounsel
 // @author			Dean Turpin
 // @description	Source code linter
 // @namespace   deanturpin
 // @include		*stylepolice/git-full.html
 // @include		https://github.com/*
-// @version     4
+// @version     1
 // @grant       none
 // ==/UserScript==
 
