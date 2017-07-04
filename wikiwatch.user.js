@@ -11,13 +11,14 @@
 // Create a popup
 var popup = document.createElement("div");
 var t = document.createTextNode("");
-popup.innerHTML += "WIKIWATCH"
+popup.innerHTML += "WIKIWATCH";
 
 // Style the popup
 var props = "text-align: left; font-family: sans-serif;";
 props += "background-color: magenta; color: white;";
-props += "position: fixed; bottom: 0; right: 0; margin: 40px 0px;";
-props += "padding: 20px;";
+props += "position: fixed; top: 0; right: 0; margin: 180px 0px;";
+props += "padding: 20px; width: 200px;";
+props += "opacity: 0.5;";
 props += "box-shadow: 10px 10px 5px #888;";
 props += "border-radius: 10px 0px 0px 10px;";
 popup.style = props;
