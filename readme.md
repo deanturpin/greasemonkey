@@ -3,6 +3,8 @@
 ## wikiwatch
 Wiki helper.
 
+[Install](wikiwatch.user.js)
+
 ## stylecounsel
 Coding standard checker for GitHub.
 
