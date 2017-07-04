@@ -1,10 +1,9 @@
 // ==UserScript==
 // @name        stylecounsel
 // @author			Dean Turpin
-// @description	Source code linter
+// @description	Source code coding standard checker for GitHub
 // @namespace   deanturpin
-// @include		*stylepolice/git-full.html
-// @include		https://github.com/*
+// @include			https://github.com/*
 // @version     1
 // @grant       none
 // ==/UserScript==
