@@ -9,7 +9,7 @@ Wiki helper. Use it on [Wikipedia](https://en.wikipedia.org/wiki/Good_Friday_Agr
 ## stylecounsel
 
 Coding standard checker for GitHub. Use it on my
-[GitHub](https://github.com/deanturpin/cpp/blob/master/standard/17/containers.cpp).
+[GitHub](https://github.com/deanturpin/cpp/blob/master/standard/17/containers.cpp) or yours.
 
 [Install](stylecounsel.user.js)
 

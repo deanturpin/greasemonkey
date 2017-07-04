@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name				wikiwatch
-// @author			Dean Turpin
+// @name		wikiwatch
+// @author		Dean Turpin
 // @description	Wiki helper
 // @namespace   deanturpin
-// @include			https://en.wikipedia.org/wiki/*
+// @include		https://en.wikipedia.org/wiki/*
 // @version     1
 // @grant       none
 // ==/UserScript==
@@ -11,12 +11,11 @@
 // Create a popup
 var popup = document.createElement("div");
 var t = document.createTextNode("");
-popup.innerHTML += "WIKIWATCH";
 
 // Style the popup
 var props = "text-align: left; font-family: sans-serif;";
 props += "background-color: magenta; color: white;";
-props += "position: fixed; top: 0; right: 0; margin: 180px 0px;";
+props += "position: fixed; top: 0; right: 0; margin: 100px 0px;";
 props += "padding: 20px; width: 200px;";
 props += "opacity: 0.5;";
 props += "box-shadow: 10px 10px 5px #888;";
@@ -26,3 +25,7 @@ popup.style = props;
 // And render it
 popup.appendChild(t);
 document.body.appendChild(popup);
+
+// Get page title
+const title = window.location.href.split("/").pop().replace(/_/g,' ');
+popup.innerHTML += "<i>" + title + "</i>";
