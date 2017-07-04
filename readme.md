@@ -1,4 +1,4 @@
-# Greasemonkey
+# Greasemonkey scripts
 
 See [dependencies and resources](dependencies.md).
 
@@ -12,7 +12,7 @@ Wiki helper.
 
 Coding standard checker for GitHub.
 
-[Install](stylecouncil.user.js)
+[Install](stylecounsel.user.js)
 
 ## trumpasaurus
 
