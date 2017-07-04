@@ -9,8 +9,8 @@
 // ==/UserScript==
 
 // Create a popup
-var popup = document.createElement("div");
-var t = document.createTextNode("");
+const popup = document.createElement("div");
+const text = document.createTextNode("");
 
 // Style the popup
 var props = "text-align: left; font-family: serif;";
@@ -24,7 +24,7 @@ props += "border-radius: 10px 0px 0px 10px;";
 popup.style = props;
 
 // And render it
-popup.appendChild(t);
+popup.appendChild(text);
 document.body.appendChild(popup);
 
 // Get page title
