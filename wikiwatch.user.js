@@ -18,9 +18,12 @@ var props = "";
 props += "text-align: left; font-family: serif;";
 props += "background-color: magenta; color: white;";
 props += "position: fixed; top: 0; left: 0;";
-props += "width: 160px; height: 160px;";
+props += "width: 140px; height: 140px;";
+props += "margin: 5px;";
+props += "padding: 5px;";
 props += "opacity: 0.7;";
 props += "box-shadow: 10px 10px 5px #888;";
+props += "border-radius: 0px 10px;";
 
 // Apply the styl and render it
 popup.style = props;
