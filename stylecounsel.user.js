@@ -17,7 +17,7 @@ var props = "text-align: left; font-family: sans-serif;";
 props += "background-color: orange; color: white;";
 props += "position: fixed; bottom: 0; right: 0; margin: 40px 0px;";
 props += "padding: 20px;";
-props += "opacity: 0.6;";
+props += "opacity: 0.4;";
 props += "box-shadow: 10px 10px 5px #888;";
 props += "border-radius: 10px 0px 0px 10px;";
 popup.style = props;
@@ -28,8 +28,6 @@ document.body.appendChild(popup);
 
 // Wrap all debug
 function report(str) { popup.innerHTML += str + "<br>"; }
-
-report("WE ARE COUNSEL <a href='https://github.com/deanturpin/stylepolice'>:)</a>");
 
 // Find the element containing the source code
 const source = document.body.getElementsByClassName("blob-wrapper")[0];
@@ -48,7 +46,7 @@ if (source !== undefined) {
     // Let's analyse
     for (var i = 0; i < sourceElement.childElementCount; ++i)
         if (lines[i] && lines[i].length > 80) {
-            
+
             sourceElement.children[i].innerHTML += " <- long line (" + lines[i].length + ")";
             ++longLines;
         }
@@ -59,4 +57,4 @@ if (source !== undefined) {
     report("Long lines " + longLines);
 }
 else
-    report("We have nothing");
+    report("Nothing to report");
