@@ -4,7 +4,7 @@
 // @description	Source code coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     1
+// @version     2
 // @grant       none
 // ==/UserScript==
 
@@ -17,7 +17,7 @@ var props = "text-align: left; font-family: sans-serif;";
 props += "background-color: orange; color: white;";
 props += "position: fixed; bottom: 0; right: 0; margin: 40px 0px;";
 props += "padding: 20px;";
-props += "opacity: 0.4;";
+props += "opacity: 0.6;";
 props += "box-shadow: 10px 10px 5px #888;";
 props += "border-radius: 10px 0px 0px 10px;";
 popup.style = props;
