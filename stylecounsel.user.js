@@ -4,7 +4,7 @@
 // @description	Source code coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     2
+// @version     3
 // @grant       none
 // ==/UserScript==
 
@@ -26,7 +26,7 @@ popup.style = props;
 popup.appendChild(t);
 document.body.appendChild(popup);
 
-report(window.location.href + "<hr>");
+report("<b>" + window.location.href.split("/").pop() + "</b><hr>");
 report("<i>Raise</i><br><a href='https://github.com/deanturpin/todo/issues/new'>default issue</a>");
 
 // Wrap all debug
