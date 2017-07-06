@@ -21,7 +21,7 @@ onload = function() {
 			for (var i = 0; i < 5; ++i)
 				body.innerText += 
 					"<a href='" + response[i].html_url + "'>"
-						+ response[i].full_name + "</a>\n"
+						+ response[i].full_name.split("/").pop() + "</a><br>\n"
 		}
 	}
 

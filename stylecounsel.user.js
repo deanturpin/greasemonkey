@@ -13,11 +13,11 @@ var popup = document.createElement("div");
 var t = document.createTextNode("");
 
 // Style the popup
-var props = "text-align: left; font-family: sans-serif;";
+var props = "text-align: right; font-family: sans-serif;";
 props += "background-color: orange; color: white;";
 props += "position: fixed; bottom: 0; right: 0; margin: 40px 0px;";
 props += "padding: 20px;";
-props += "opacity: 0.6;";
+props += "opacity: 0.8;";
 props += "box-shadow: 10px 10px 5px #888;";
 props += "border-radius: 10px 0px 0px 10px;";
 popup.style = props;
@@ -26,11 +26,37 @@ popup.style = props;
 popup.appendChild(t);
 document.body.appendChild(popup);
 
-report(window.location.href);
-report("Raise <a href='https://github.com/deanturpin/todo/issues/new'>default issue</a>");
+report(window.location.href + "<hr>");
+report("<i>Raise</i><br><a href='https://github.com/deanturpin/todo/issues/new'>default issue</a>");
 
 // Wrap all debug
 function report(str) { popup.innerHTML += str + "<br>"; }
+
+// Create a new AJAX request
+var client = new XMLHttpRequest();
+
+// Set up handler for AJAX response
+client.onreadystatechange = function() {
+
+    // Check response is a good one
+    if (this.readyState === 4 && this.status === 200) {
+        const response = JSON.parse(client.responseText);
+
+        // Sort the response by date
+        response.sort(function(a, b) {
+            return (new Date(b.pushed_at) - new Date(a.pushed_at));
+        });
+
+        report("<br><i>Recent activity</i>");
+
+        for (var i = 0; i < 5; ++i)
+            report("<a href='" + response[i].html_url + "'>"  + response[i].full_name.split("/").pop() + "</a>\n");
+    }
+};
+
+// Request recent repos
+client.open("GET", "https://api.github.com/users/deanturpin/repos");
+client.send();
 
 // Find the element containing the source code
 const source = document.body.getElementsByClassName("blob-wrapper")[0];
