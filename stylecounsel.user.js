@@ -26,6 +26,9 @@ popup.style = props;
 popup.appendChild(t);
 document.body.appendChild(popup);
 
+report(window.location.href);
+report("Raise <a href='https://github.com/deanturpin/todo/issues/new'>default issue</a>");
+
 // Wrap all debug
 function report(str) { popup.innerHTML += str + "<br>"; }
 
@@ -56,5 +59,3 @@ if (source !== undefined) {
     report("File type " + window.location.pathname.split(".").pop());
     report("Long lines " + longLines);
 }
-else
-    report("Nothing to report");
