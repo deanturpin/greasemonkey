@@ -6,7 +6,7 @@ thing but I prefer the Chrome/TM combination. The editor's less quirky, has good
 error highlighting and I like how it keeps everything in tabs. The main
 Greasemonkey annoyance for me is saving: you can happily save your work to
 another location but the editor is then editing the saved location, not the live
-version in the browser.
+version in the browser. Also the pretty print button has some extreme results!
 
 # Workflow
 
@@ -19,3 +19,4 @@ side and the Tampermonkey editor to the other. I'm running Ubuntu Gnome.
 
 - http://commons.oreilly.com/wiki/index.php/Greasemonkey_Hacks/Getting_Started
 - [My Greasemonkey template](https://github.com/deanturpin/templates/blob/master/greasemonkey-popup.user.js)
+- See my [API crib sheet](api.md)
