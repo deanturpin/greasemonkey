@@ -4,7 +4,7 @@
 // @description	Helper panel and coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     2
+// @version     3
 // @grant       none
 // ==/UserScript==
 
@@ -46,7 +46,7 @@ client.onreadystatechange = function() {
 
         // Sort the response by date
         response.sort(function(a, b) {
-            return (new Date(b.pushed_at) - new Date(a.pushed_at));
+            return (new Date(b.updated_at) - new Date(a.updated_at));
         });
 
         report("<i>Recent activity</i>");
