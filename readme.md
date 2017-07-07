@@ -6,12 +6,12 @@ Wiki helper. Use it on [Wikipedia](https://en.wikipedia.org/wiki/Good_Friday_Agr
 
 [Install](wikiwatch.user.js)
 
-## stylecounsel
+## gitguide
 
-Coding standard checker for GitHub. Use it on my
+Helper panel for GitHub. Show's current user's recent repos.
 [GitHub](https://github.com/deanturpin/cpp/blob/master/standard/17/containers.cpp) or yours.
 
-[Install](stylecounsel.user.js)
+[Install](gitguide.user.js)
 
 ## trumpasaurus
 

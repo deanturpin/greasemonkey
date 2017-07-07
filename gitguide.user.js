@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name        stylecounsel
+// @name        gitguide
 // @author		Dean Turpin
-// @description	Source code coding standard checker for GitHub
+// @description	Helper panel for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     3
+// @version     1
 // @grant       none
 // ==/UserScript==
 
