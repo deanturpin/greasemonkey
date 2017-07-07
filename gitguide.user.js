@@ -4,7 +4,7 @@
 // @description	Helper panel and coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     4
+// @version     5
 // @grant       none
 // ==/UserScript==
 
@@ -42,20 +42,19 @@ client.onreadystatechange = function() {
 
     // Check response is a good one
     if (this.readyState === 4 && this.status === 200) {
+
         const response = JSON.parse(client.responseText);
 
         // Sort the response by date
         response.sort(function(a, b) {
-            return (new Date(b.updated_at) - new Date(a.updated_at));
+            return (new Date(b.pushed_at) - new Date(a.pushed_at));
         });
-
-        report("<b>Recent</b>");
 
         for (var i = 0; i < 10 && i < response.length; ++i) {
 
             // Construct links to recent repos and new issue
-            var url = response[i].html_url;
-            var name = response[i].name;
+            const url = response[i].html_url;
+            const name = response[i].name;
             var link = "<a href='" + url + "'>"  + name + "</a>";
             link += " <a href='" + url + "/issues/new'>+</a>";
             report(link);
@@ -91,5 +90,4 @@ if (source !== undefined) {
     // Report some things
     report("Lines " + lines.length);
     report("Long lines " + longLines);
-    report("");
 }
