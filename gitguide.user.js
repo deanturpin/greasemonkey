@@ -14,7 +14,7 @@ var t = document.createTextNode("");
 
 // Style the popup
 var props = "text-align: right; font-family: sans-serif;";
-props += "background-color: orange; color: white;";
+props += "background-color: #fee; color: black;";
 props += "position: fixed; bottom: 0; right: 0; margin: 40px 0px;";
 props += "padding: 20px;";
 props += "opacity: 0.8;";
@@ -29,7 +29,7 @@ document.body.appendChild(popup);
 // Extract current repo info
 const urlTokens = window.location.href.split("/");
 const user = urlTokens[3];
-report("<b>" + urlTokens.pop() + "</b><hr>");
+report("<b>" + urlTokens.pop().toUpperCase() + "</b>");
 
 // Wrap all debug
 function report(str) { popup.innerHTML += str + "<br>"; }
@@ -49,10 +49,17 @@ client.onreadystatechange = function() {
             return (new Date(b.updated_at) - new Date(a.updated_at));
         });
 
-        report("<i>Recent activity</i>");
+        report("<b>Recent</b>");
 
-        for (var i = 0; i < 10 && i < response.length; ++i)
-            report("<a href='" + response[i].html_url + "'>"  + response[i].name + "</a>\n");
+        for (var i = 0; i < 10 && i < response.length; ++i) {
+
+            // Construct links to recent repos and new issue
+            var url = response[i].html_url;
+            var name = response[i].name;
+            var link = "<a href='" + url + "'>"  + name + "</a>";
+            link += " <a href='" + url + "/issues/new'>+</a>";
+            report(link);
+        }
     }
 };
 

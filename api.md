@@ -13,7 +13,12 @@ curl --silent 'https://api.github.com/users/deanturpin/repos?per_page=5'  | grep
 "full_name": "deanturpin/config",
 ```
 
-Get issues
+Issues for a repo
 ```
 https://api.github.com/repos/deanturpin/Bash/issues
+```
+
+Events - see https://developer.github.com/v3/activity/events/
+```
+https://api.github.com/users/deanturpin/events
 ```
