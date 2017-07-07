@@ -51,7 +51,7 @@ client.onreadystatechange = function() {
 
         report("<i>Recent activity</i>");
 
-        for (var i = 0; i < 5 && i < response.length; ++i)
+        for (var i = 0; i < 10 && i < response.length; ++i)
             report("<a href='" + response[i].html_url + "'>"  + response[i].name + "</a>\n");
     }
 };
