@@ -4,7 +4,7 @@
 // @description	Helper panel and coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     3
+// @version     4
 // @grant       none
 // ==/UserScript==
 
@@ -60,7 +60,7 @@ client.onreadystatechange = function() {
 if (user !== "") {
 
     // Request recent repos
-    client.open("GET", "https://api.github.com/users/" + user + "/repos");
+    client.open("GET", "https://api.github.com/users/" + user + "/repos?per_page=5000");
     client.send();
 }
 
