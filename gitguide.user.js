@@ -4,7 +4,7 @@
 // @description	Helper panel and coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     2
+// @version     4
 // @grant       none
 // ==/UserScript==
 
@@ -46,13 +46,13 @@ client.onreadystatechange = function() {
 
         // Sort the response by date
         response.sort(function(a, b) {
-            return (new Date(b.pushed_at) - new Date(a.pushed_at));
+            return (new Date(b.updated_at) - new Date(a.updated_at));
         });
 
         report("<i>Recent activity</i>");
 
         for (var i = 0; i < 5 && i < response.length; ++i)
-            report("<a href='" + response[i].html_url + "'>"  + response[i].full_name.split("/").pop() + "</a>\n");
+            report("<a href='" + response[i].html_url + "'>"  + response[i].name + "</a>\n");
     }
 };
 
@@ -60,7 +60,7 @@ client.onreadystatechange = function() {
 if (user !== "") {
 
     // Request recent repos
-    client.open("GET", "https://api.github.com/users/" + user + "/repos");
+    client.open("GET", "https://api.github.com/users/" + user + "/repos?per_page=5000");
     client.send();
 }
 
