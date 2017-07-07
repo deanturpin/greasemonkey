@@ -26,8 +26,10 @@ popup.style = props;
 popup.appendChild(t);
 document.body.appendChild(popup);
 
-report("<b>" + window.location.href.split("/").pop() + "</b><hr>");
-report("<i>Raise</i><br><a href='https://github.com/deanturpin/todo/issues/new'>default issue</a>");
+// Extract current repo info
+const urlTokens = window.location.href.split("/");
+const user = urlTokens[3];
+report("<b>" + urlTokens.pop() + "</b><hr>");
 
 // Wrap all debug
 function report(str) { popup.innerHTML += str + "<br>"; }
@@ -47,16 +49,20 @@ client.onreadystatechange = function() {
             return (new Date(b.pushed_at) - new Date(a.pushed_at));
         });
 
-        report("<br><i>Recent activity</i>");
+        report("<i>Recent activity</i>");
 
-        for (var i = 0; i < 5; ++i)
+        for (var i = 0; i < 5 && i < response.length; ++i)
             report("<a href='" + response[i].html_url + "'>"  + response[i].full_name.split("/").pop() + "</a>\n");
     }
 };
 
-// Request recent repos
-client.open("GET", "https://api.github.com/users/deanturpin/repos");
-client.send();
+// Check if there's a valid user
+if (user !== "") {
+
+    // Request recent repos
+    client.open("GET", "https://api.github.com/users/" + user + "/repos");
+    client.send();
+}
 
 // Find the element containing the source code
 const source = document.body.getElementsByClassName("blob-wrapper")[0];
