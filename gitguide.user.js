@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name        gitguide
 // @author		Dean Turpin
-// @description	Helper panel for GitHub
+// @description	Helper panel and coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     1
+// @version     2
 // @grant       none
 // ==/UserScript==
 
@@ -70,24 +70,19 @@ const source = document.body.getElementsByClassName("blob-wrapper")[0];
 // If we failed then quit
 if (source !== undefined) {
 
-    const sourceElement = source.children[0].children[0];
-
-    // Get the plaintext ssource to parse
-    const lines = sourceElement.innerText.split("\n");
+    // Get the plaintext source to parse
+    const lines = source.children[0].children[0].innerText.split("\n");
 
     // Things we'll report
     var longLines = 0;
 
-    // Let's analyse
-    for (var i = 0; i < sourceElement.childElementCount; ++i)
-        if (lines[i] && lines[i].length > 80) {
-
-            sourceElement.children[i].innerHTML += " <- long line (" + lines[i].length + ")";
+    // Let's check some things
+    for (var i = 0; i < lines.length; ++i)
+        if (lines[i] && lines[i].length > 80)
             ++longLines;
-        }
 
     // Report some things
-    report("Lines " + sourceElement.childElementCount);
-    report("File type " + window.location.pathname.split(".").pop());
+    report("Lines " + lines.length);
     report("Long lines " + longLines);
+    report("");
 }
