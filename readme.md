@@ -8,8 +8,8 @@ Wiki helper. Use it on [Wikipedia](https://en.wikipedia.org/wiki/Good_Friday_Agr
 
 ## gitguide
 
-Helper panel for GitHub. Show's current user's recent repos.
-[GitHub](https://github.com/deanturpin/cpp/blob/master/standard/17/containers.cpp) or yours.
+Helper panel for GitHub. Show's current user's recent repos. Try it on
+[my GitHub](https://github.com/deanturpin/cpp/blob/master/standard/17/containers.cpp) or yours.
 
 [Install](gitguide.user.js)
 
