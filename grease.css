@@ -11,7 +11,7 @@
 	/* Where is it? */
 	position: fixed;
 	bottom: 0;
-	right: -280px;
+	right: -270px;
 
 	/* What's around it? */
 	width: 300px;
@@ -19,7 +19,7 @@
 	padding: 20px;
 
 	/* What's underneath it? */
-	opacity: 0.4;
+	opacity: 0.5;
 	box-shadow: 10px 10px 5px #ccc;
 	border-radius: 10px 0px 0px 10px;
 
