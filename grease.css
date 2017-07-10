@@ -8,12 +8,13 @@
 	background-color: #fee;
 	color: black;
 
-	/* Where it is? */
+	/* Where is it? */
 	position: fixed;
 	bottom: 0;
-	right: 0;
+	right: -290px;
 
 	/* What's around it? */
+	width: 300px;
 	margin: 40px 0px;
 	padding: 20px;
 
@@ -21,8 +22,22 @@
 	opacity: 0.6;
 	box-shadow: 10px 10px 5px #ccc;
 	border-radius: 10px 0px 0px 10px;
+
+	/* For Safari 3.1 to 6.0 */
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 2s;
+	-webkit-transition-timing-function: linear;
+
+	/* Standard syntax */
+	transition-property: right;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+	transition-timing-function: ease-in-out;
 }
 
+/* Change style on hover */
 #gmpopup:hover {
+
 	opacity: 1.0;
+	right: 0px;
 }
