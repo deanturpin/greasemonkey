@@ -4,16 +4,18 @@
 // @description	Helper panel and coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     7
+// @version     8
 // @grant       GM_addStyle
 // @grant       GM_getResourceText
-// @resource    css https://deanturpin.github.io/greasemonkey/style.css?7
+// @resource    css https://deanturpin.github.io/greasemonkey/grease.css?8
 // ==/UserScript==
 
 // Create a popup
 const popup = document.createElement("div");
-popup.id = "gitguide";
 const defaultPopupText = document.createTextNode("");
+
+// Give it a good ID to apply style to later
+popup.id = "gmpopup";
 
 // Style the popup
 GM_addStyle(GM_getResourceText("css"));

@@ -3,28 +3,27 @@
 // @namespace   deanturpin
 // @description Quick word stat check to find candidate speeches for further study
 // @include     http://www.britishpoliticalspeech.org/*
-// @version     1
-// @grant       none
+// @version     2
+// @grant       GM_addStyle
+// @grant       GM_getResourceText
+// @resource    css https://deanturpin.github.io/greasemonkey/grease.css?2
 // ==/UserScript==
 
 // Create a popup
-var popup = document.createElement("div");
-var t = document.createTextNode("");
+const popup = document.createElement("div");
+const defaultPopupText = document.createTextNode("");
+
+// Give it a good ID to apply style to later
+popup.id = "gmpopup";
 
 // Style the popup
-var props = "font-size: 200%; text-align: left;";
-props += "background-color: #eee; color: black;  border: 1px solid black;";
-props += "position:fixed; bottom: 0; right: 0; width: 500px; margin: 20px;";
-props += "padding: 20px;";
-props += "box-shadow: 10px 10px 5px #ccc;";
-props += "border-radius: 20px;";
-popup.style = props;
+GM_addStyle(GM_getResourceText("css"));
 
-popup.appendChild(t);
+popup.appendChild(defaultPopupText);
 document.body.appendChild(popup);
 
 // Initialise popup
-popup.innerHTML = "<h1 style=\"color:red;\">TRUMPY 👌</h1>";
+popup.innerHTML = "<h1 style=\"color:red;\">TRUMPASAURUS 👌</h1>";
 
 var speech = "";
 
