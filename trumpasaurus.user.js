@@ -3,10 +3,10 @@
 // @namespace   deanturpin
 // @description Quick word stat check to find candidate speeches for further study
 // @include     http://www.britishpoliticalspeech.org/*
-// @version     2
+// @version     3
 // @grant       GM_addStyle
 // @grant       GM_getResourceText
-// @resource    css https://deanturpin.github.io/greasemonkey/grease.css?2
+// @resource    css https://deanturpin.github.io/greasemonkey/grease.css
 // ==/UserScript==
 
 // Create a popup

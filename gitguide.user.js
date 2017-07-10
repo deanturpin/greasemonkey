@@ -4,10 +4,10 @@
 // @description	Helper panel and coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     8
+// @version     9
 // @grant       GM_addStyle
 // @grant       GM_getResourceText
-// @resource    css https://deanturpin.github.io/greasemonkey/grease.css?8
+// @resource    css https://deanturpin.github.io/greasemonkey/grease.css
 // ==/UserScript==
 
 // Create a popup
