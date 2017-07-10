@@ -1,5 +1,7 @@
 See [dependencies and resources](dependencies.md).
 
+I've used [external styles](style.css).
+
 ## Git Guide
 
 Helper panel for GitHub. Show's current user's recent repos. Try it on
