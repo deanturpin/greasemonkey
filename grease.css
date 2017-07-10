@@ -19,17 +19,17 @@
 	padding: 20px;
 
 	/* What's underneath it? */
-	opacity: 0.6;
+	opacity: 0.4;
 	box-shadow: 10px 10px 5px #ccc;
 	border-radius: 10px 0px 0px 10px;
 
 	/* For Safari 3.1 to 6.0 */
-	-webkit-transition-property: width;
+	-webkit-transition-property: right opacity;
 	-webkit-transition-duration: 2s;
 	-webkit-transition-timing-function: linear;
 
 	/* Standard syntax */
-	transition-property: right;
+	transition-property: right opacity;
 	transition-duration: 0.2s;
 	transition-timing-function: linear;
 	transition-timing-function: ease-in-out;
@@ -38,6 +38,6 @@
 /* Change style on hover */
 #gmpopup:hover {
 
-	opacity: 1.0;
-	right: -1px;
+	opacity: 0.9;
+	right: 0px;
 }
