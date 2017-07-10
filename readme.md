@@ -1,6 +1,6 @@
 See [dependencies and resources](dependencies.md).
 
-I've used [external styles](style.css).
+I've used [external styles](grease.css).
 
 ## Git Guide
 
