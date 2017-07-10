@@ -11,7 +11,7 @@
 	/* Where is it? */
 	position: fixed;
 	bottom: 0;
-	right: -290px;
+	right: -280px;
 
 	/* What's around it? */
 	width: 300px;
@@ -39,5 +39,5 @@
 #gmpopup:hover {
 
 	opacity: 1.0;
-	right: 0px;
+	right: -1px;
 }
