@@ -16,6 +16,8 @@ Word analysis for political speeches. Use it on the
 
 ## Wiki Watch
 
-Wiki helper. Use it on [Wikipedia](https://en.wikipedia.org/wiki/Good_Friday_Agreement).
+Very much an alpha.
+
+Popup wiki helper. Use it on [Wikipedia](https://en.wikipedia.org/wiki/Good_Friday_Agreement).
 
 [Install](wikiwatch.user.js)
