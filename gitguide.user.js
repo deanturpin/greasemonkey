@@ -4,26 +4,22 @@
 // @description	Helper panel and coding standard checker for GitHub
 // @namespace   deanturpin
 // @include		https://github.com/*
-// @version     5
-// @grant       none
+// @version     6
+// @grant       GM_addStyle
+// @grant       GM_getResourceText
+// @resource    css https://deanturpin.github.io/greasemonkey/style.css?6
 // ==/UserScript==
 
 // Create a popup
-var popup = document.createElement("div");
-var t = document.createTextNode("");
+const popup = document.createElement("div");
+popup.id = "gitguide";
+const defaultPopupText = document.createTextNode("blah");
 
 // Style the popup
-var props = "text-align: right; font-family: sans-serif;";
-props += "background-color: #fee; color: black;";
-props += "position: fixed; bottom: 0; right: 0; margin: 40px 0px;";
-props += "padding: 20px;";
-props += "opacity: 0.8;";
-props += "box-shadow: 10px 10px 5px #888;";
-props += "border-radius: 10px 0px 0px 10px;";
-popup.style = props;
+GM_addStyle(GM_getResourceText("css"));
 
 // And render it
-popup.appendChild(t);
+popup.appendChild(defaultPopupText);
 document.body.appendChild(popup);
 
 // Extract current repo info
