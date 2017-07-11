@@ -23,15 +23,9 @@
 	box-shadow: 10px 10px 5px #ccc;
 	border-radius: 10px 0px 0px 10px;
 
-	/* For Safari 3.1 to 6.0 */
-	-webkit-transition-property: right opacity;
-	-webkit-transition-duration: 2s;
-	-webkit-transition-timing-function: linear;
-
 	/* Standard syntax */
 	transition-property: right opacity;
 	transition-duration: 0.2s;
-	transition-timing-function: linear;
 	transition-timing-function: ease-in-out;
 }
 
